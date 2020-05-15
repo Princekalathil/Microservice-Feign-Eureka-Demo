@@ -1,0 +1,19 @@
+server:
+  port: 8082
+spring:
+  application:
+    name:crimestopperDemo2
+  profiles:
+    active: dev
+  cloud:
+    consul:
+      discovery:
+        healthCheckPath: /api/health
+        healthCheckInterval: 15s
+        
+management:
+  security:
+    enabled: false
+  health:
+    consul:
+      enabled: false  
